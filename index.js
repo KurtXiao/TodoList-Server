@@ -14,6 +14,7 @@ app.listen(port, () => {
 })
 
 app.post('/register', async (req, res) => {
+  console.log(req);
   res.send(await dBOptions.register(req.body.username, req.body.password));
 });
 
