@@ -10,11 +10,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at port:${port}`);
 })
 
 app.post('/register', async (req, res) => {
-  console.log(req);
   res.send(await dBOptions.register(req.body.username, req.body.password));
 });
 
